@@ -1,0 +1,687 @@
+/*portfolio*/
+
+.head {
+    background: url(../images/Untitled-3.jpg);
+    background-size: cover;
+    padding: 600px 0px;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    margin: 27px;
+}
+
+.icon ul {
+    text-align: center;
+}
+
+.icon ul li {
+    font-size: 30px;
+    list-style-type: none;
+}
+
+.text h1 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 250px;
+    font-family: copperplate Gothic;
+}
+
+.me h1 {
+    text-align: center;
+    text-align: 25px;
+}
+
+.me p {
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.me hr {
+    margin-top: 20px;
+    margin-bottom: 24px;
+    border: 0;
+    border-top: 10px solid #060606;
+}
+
+.img img {
+    width: 100%;
+}
+
+.nature {
+    text-align: center;
+    padding: 50px;
+    font-size: 43px;
+}
+
+.myphotos img {
+    padding: 13px;
+}
+
+.last img {
+    width: 100%;
+}
+
+.bbb {
+    background: url(../images/105.jpg);
+    background-size: cover;
+    padding: 80px 0px;
+    background-repeat: no-repeat;
+    margin: 27px;
+    color: white;
+    font-family: copperplate Gothic;
+}
+
+.bbb ul li {
+    text-align: center;
+    list-style-type: none;
+    line-height: 40px;
+    color: white;
+    font-size: 18px;
+}
+
+
+/*portfolioend*/
+
+
+/*photographystarted*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: copperplate Gothic;
+    font-weight: lighter;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.content {
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.logo {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin: 16px 46px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+}
+
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: #000;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 16px 40px;
+    ;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+@media(max-width: 786px) {
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+    nav.black ul {
+        background: #000;
+    }
+    .showing {
+        max-height: 34em;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+/*navend*/
+
+.photography-1 {
+    font-family: copperplate gothic;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.tulip-1 img {
+    border: 10px outset silver;
+}
+
+.tulip-2 img {
+    border: 10px outset silver;
+}
+
+.tulip-5 {
+    position: relative;
+    bottom: 165px;
+}
+
+.rose-1 {
+    text-align: center;
+    font-family: copperplate gothic;
+}
+
+.rose-1 h3 {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.photography-3 {
+    padding-top: 150px;
+}
+
+.black {
+    z-index: 999;
+}
+
+
+/* Reset */
+
+.tiles {
+    width: 1040px;
+    font-size: 0;
+    text-align: center;
+    position: absolute;
+    top: 390%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.tiles .tile {
+    display: inline-block;
+    margin: 10px;
+    text-align: left;
+    opacity: .99;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.tiles .tile:before {
+    content: '';
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7)));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    -webkit-transition-property: top, opacity;
+    transition-property: top, opacity;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.tiles .tile img {
+    display: block;
+    max-width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.tiles .tile .details {
+    font-size: 16px;
+    padding: 20px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.tiles .tile .details span {
+    display: block;
+    opacity: 0;
+    position: relative;
+    top: 100px;
+    -webkit-transition-property: top, opacity;
+    transition-property: top, opacity;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.tiles .tile .details .title {
+    line-height: 1;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.tiles .tile .details .info {
+    line-height: 1.2;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.tiles .tile:focus:before,
+.tiles .tile:focus span,
+.tiles .tile:hover:before,
+.tiles .tile:hover span {
+    opacity: 1;
+}
+
+.tiles .tile:focus:before,
+.tiles .tile:hover:before {
+    top: 50%;
+}
+
+.tiles .tile:focus span,
+.tiles .tile:hover span {
+    top: 0;
+}
+
+.tiles .tile:focus .title,
+.tiles .tile:hover .title {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+
+.tiles .tile:focus .info,
+.tiles .tile:hover .info {
+    -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+}
+
+.bird-2 img {
+    bottom: 270px;
+    position: relative;
+    width: 180%;
+    left: 117px;
+    clear: both;
+}
+
+.rose-10 {
+    background: url(../images/101.jpg);
+    background-size: cover;
+    padding: 80px 0px;
+    margin: 27px;
+    font-family: copperplate Gothic;
+    position: relative;
+    top: 450px;
+}
+
+.rose-10 ul li {
+    text-align: center;
+    list-style-type: none;
+    line-height: 40px;
+    color: white;
+    font-size: 18px;
+}
+
+
+/*photographyend*/
+
+
+/*flower*/
+
+.flowerdiv-1 {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 45px;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 30px;
+}
+
+.item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+.item2 {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+.flowerdiv-2 {
+    padding-top: 100px;
+}
+
+.flowerdiv-3 {
+    padding-top: 100px;
+}
+
+.footer-10 {
+    background: url(../images/77.jpg);
+    background-size: cover;
+    padding: 80px 0px;
+    background-repeat: no-repeat;
+    margin: 27px;
+    color: white;
+    font-family: copperplate Gothic;
+}
+
+.footer-10 ul li {
+    text-align: center;
+    list-style-type: none;
+    line-height: 40px;
+    color: white;
+    font-size: 18px;
+}
+
+
+/*flowerend*/
+
+
+/*animal*/
+
+a {
+    color: black;
+}
+
+.nav-item {
+    font-family: copperplate Gothic;
+    text-align: center;
+}
+
+.nav-item a {
+    color: #FFF;
+    text-decoration: none;
+    font: 20px copperplate Gothic;
+    margin: -17px 9px;
+    padding: 5px 35px;
+}
+
+.birds {
+    padding-top: 70px;
+}
+
+.bird {
+    background: url(../images/32.jpg);
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    margin: 27px;
+}
+
+.bird p {
+    line-height: 50px;
+    text-align: right;
+    font-weight: 700;
+    font-family: cursive;
+}
+
+.peacock {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.squrel {
+    background: url(../images/35.jpg);
+    background-repeat: round;
+    padding-top: 20px;
+}
+
+.owl {
+    margin: 20px
+}
+
+.eley {
+    background: url(../images/41.jpg);
+    background-size: cover;
+    padding: 80px 0px;
+    background-repeat: no-repeat;
+    margin: 27px;
+    font-family: copperplate Gothic;
+}
+
+.eley ul li {
+    text-align: center;
+    list-style-type: none;
+    line-height: 40px;
+    color: black;
+    font-size: 18px;
+}
+
+.gallery {
+    margin: 10px 50px;
+}
+
+.gallery img {
+    transition: 0.1s;
+    padding: 15px;
+    width: 200px;
+}
+
+.gallery img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+
+
+/*animalend*/
+
+
+/*clouds*/
+
+.clouds {
+    background: url(../images/42.jpg);
+    background-size: cover;
+    padding: 80px 0px;
+    background-repeat: no-repeat;
+    margin: 27px;
+}
+
+.clouds p {
+    position: relative;
+    top: 192px;
+    text-align: center;
+    border: solid 3px #03cbff;
+    color: #03cbff;
+    left: 160px;
+    width: 721px;
+    font-family: copperplate Gothic;
+    background: white;
+    font-size: 13px;
+    line-height: 32px;
+    clear: both;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.section-2 {
+    padding-top: 250px;
+}
+
+.clouds-2 p {
+    padding-top: 50px;
+    font-family: copperplate Gothic;
+    color: #03cbff;
+    font-size: 13px;
+    line-height: 32px;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.clouds-4 p {
+    font-family: copperplate Gothic;
+    border: solid 3px #03cbff;
+    color: #03cbff;
+    font-size: 15px;
+    line-height: 42px;
+    text-align: left;
+    z-index: 2;
+    position: relative;
+    top: -23px;
+    left: 198px;
+    background: white;
+}
+
+.clouds-5 img {
+    position: absolute;
+    top: -60px;
+    left: 146px;
+}
+
+.clouds-6 img {
+    position: absolute;
+    top: -80px;
+    left: 146px;
+    z-index: 3;
+    clear: both;
+}
+
+.clouds-20 p {
+    font-family: copperplate Gothic;
+    border: solid 3px #03cbff;
+    color: #03cbff;
+    font-size: 15px;
+    line-height: 42px;
+    text-align: left;
+    z-index: 2;
+    position: relative;
+    top: 50px;
+    left: 71px;
+    background: white;
+}
+
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 9;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.facebook {
+    background: transparent;
+    color: white;
+}
+
+.twitter {
+    background: transparent;
+    color: white;
+}
+
+.google {
+    background: transparent;
+    color: white;
+}
+
+.protfolio {
+    background: transparent;
+    color: white;
+}
+
+.clouds-99 {
+    background: transparent;
+    color: white;
+}
+
+.content {
+    margin-left: 75px;
+    font-size: 30px;
+    clear: both;
+}
+
+.section-5 {
+    background: url(../images/48.jpg);
+    background-size: cover;
+    padding: 80px 0px;
+    background-repeat: no-repeat;
+    margin: 27px;
+    color: white;
+    font-family: copperplate Gothic;
+    position: relative;
+    top: 200px;
+}
+
+.section-5 ul li {
+    text-align: center;
+    list-style-type: none;
+    line-height: 40px;
+    color: white;
+}
+
+
+/*cloudend
