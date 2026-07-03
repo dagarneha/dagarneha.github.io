@@ -893,17 +893,6 @@ body.cursor-hover .cursor-ring {
     color: var(--text-muted);
 }
 
-.footer__link {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--text-muted);
-    transition: color 0.2s;
-}
-
-.footer__link:hover {
-    color: var(--accent);
-}
-
 /* Scroll reveal animations */
 .reveal {
     opacity: 0;
