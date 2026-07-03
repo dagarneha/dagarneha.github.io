@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maya Chen — Graphic designer specializing in brand identity, print, and digital design.">
+    <title>Maya Chen — Graphic Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+
+<body>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <nav class="nav" id="nav">
+        <a href="#home" class="nav__logo">Maya Chen</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact" class="nav__cta">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section class="hero" id="home">
+            <div class="hero__content">
+                <p class="hero__eyebrow reveal">Graphic Designer &amp; Visual Storyteller</p>
+                <h1 class="hero__title reveal">
+                    Crafting <em>bold</em> brands<br>
+                    &amp; memorable visuals
+                </h1>
+                <p class="hero__desc reveal">
+                    I help studios, startups, and cultural brands translate ideas into
+                    striking identities, editorial layouts, and digital experiences.
+                </p>
+                <div class="hero__actions reveal">
+                    <a href="#work" class="btn btn--primary">View Selected Work</a>
+                    <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero__visual reveal">
+                <div class="hero__frame">
+                    <img src="images/60.png" alt="Abstract brand identity collage">
+                </div>
+                <div class="hero__badge">
+                    <span>Based in</span>
+                    <strong>San Francisco</strong>
+                </div>
+            </div>
+            <div class="hero__scroll" aria-hidden="true">
+                <span>Scroll</span>
+                <div class="hero__scroll-line"></div>
+            </div>
+        </section>
+
+        <section class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>Brand Identity</span>
+                <span>Editorial Design</span>
+                <span>Packaging</span>
+                <span>Art Direction</span>
+                <span>Typography</span>
+                <span>Motion Graphics</span>
+                <span>Brand Identity</span>
+                <span>Editorial Design</span>
+                <span>Packaging</span>
+                <span>Art Direction</span>
+                <span>Typography</span>
+                <span>Motion Graphics</span>
+            </div>
+        </section>
+
+        <section class="work" id="work">
+            <div class="section-header">
+                <span class="section-label reveal">Selected Work</span>
+                <h2 class="section-title reveal">Projects that<br>speak visually</h2>
+            </div>
+
+            <div class="filters reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="print">Print</button>
+                <button class="filter-btn" data-filter="digital">Digital</button>
+            </div>
+
+            <div class="gallery">
+                <article class="gallery__item reveal" data-category="branding">
+                    <a href="#" class="gallery__link">
+                        <div class="gallery__image">
+                            <img src="images/61.png" alt="Verdant Co. brand identity system">
+                        </div>
+                        <div class="gallery__info">
+                            <h3>Verdant Co.</h3>
+                            <p>Brand Identity · 2025</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="gallery__item reveal" data-category="print">
+                    <a href="#" class="gallery__link">
+                        <div class="gallery__image">
+                            <img src="images/62.png" alt="Lumen Festival poster series">
+                        </div>
+                        <div class="gallery__info">
+                            <h3>Lumen Festival</h3>
+                            <p>Poster Series · 2025</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="gallery__item reveal" data-category="digital">
+                    <a href="#" class="gallery__link">
+                        <div class="gallery__image">
+                            <img src="images/63.png" alt="Arc Studio digital campaign">
+                        </div>
+                        <div class="gallery__info">
+                            <h3>Arc Studio</h3>
+                            <p>Digital Campaign · 2024</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="gallery__item reveal" data-category="branding">
+                    <a href="#" class="gallery__link">
+                        <div class="gallery__image">
+                            <img src="images/64.png" alt="Nomad Coffee packaging design">
+                        </div>
+                        <div class="gallery__info">
+                            <h3>Nomad Coffee</h3>
+                            <p>Packaging · 2024</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="gallery__item gallery__item--wide reveal" data-category="print">
+                    <a href="#" class="gallery__link">
+                        <div class="gallery__image">
+                            <img src="images/Untitled-4.jpg" alt="Editorial spread for Form Magazine">
+                        </div>
+                        <div class="gallery__info">
+                            <h3>Form Magazine</h3>
+                            <p>Editorial Layout · 2024</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="gallery__item reveal" data-category="digital">
+                    <a href="#" class="gallery__link">
+                        <div class="gallery__image">
+                            <img src="images/94.png" alt="Botanical Society social media kit">
+                        </div>
+                        <div class="gallery__info">
+                            <h3>Botanical Society</h3>
+                            <p>Social Media Kit · 2023</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="gallery__item reveal" data-category="branding">
+                    <a href="#" class="gallery__link">
+                        <div class="gallery__image">
+                            <img src="images/95.png" alt="Atelier Luxe visual identity">
+                        </div>
+                        <div class="gallery__info">
+                            <h3>Atelier Luxe</h3>
+                            <p>Visual Identity · 2023</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="gallery__item reveal" data-category="print">
+                    <a href="#" class="gallery__link">
+                        <div class="gallery__image">
+                            <img src="images/96.png" alt="Rose Gallery exhibition catalog">
+                        </div>
+                        <div class="gallery__info">
+                            <h3>Rose Gallery</h3>
+                            <p>Exhibition Catalog · 2023</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about__grid">
+                <div class="about__image reveal">
+                    <img src="images/Untitled-7.jpg" alt="Maya Chen in her studio">
+                    <div class="about__image-accent"></div>
+                </div>
+                <div class="about__content">
+                    <span class="section-label reveal">About Me</span>
+                    <h2 class="section-title reveal">Design with<br>intention &amp; edge</h2>
+                    <p class="about__text reveal">
+                        I'm Maya Chen, a graphic designer with eight years of experience shaping
+                        visual identities for brands that want to stand apart. My work sits at the
+                        intersection of editorial precision and bold, expressive typography.
+                    </p>
+                    <p class="about__text reveal">
+                        From logo systems and packaging to campaign art direction, I believe every
+                        touchpoint should feel considered — and impossible to forget.
+                    </p>
+
+                    <div class="skills reveal">
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span>Brand Identity</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill__bar"><div class="skill__fill" data-width="95"></div></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span>Typography</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill__bar"><div class="skill__fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span>Print &amp; Editorial</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill__bar"><div class="skill__fill" data-width="88"></div></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span>Digital Design</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill__bar"><div class="skill__fill" data-width="85"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="tools reveal">
+                        <span class="tools__label">Tools I use</span>
+                        <div class="tools__list">
+                            <span>Illustrator</span>
+                            <span>Photoshop</span>
+                            <span>InDesign</span>
+                            <span>Figma</span>
+                            <span>After Effects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="section-header section-header--center">
+                <span class="section-label reveal">Services</span>
+                <h2 class="section-title reveal">What I can<br>create for you</h2>
+            </div>
+
+            <div class="services__grid">
+                <article class="service-card reveal">
+                    <span class="service-card__number">01</span>
+                    <h3>Brand Identity</h3>
+                    <p>Logo design, color systems, typography, and brand guidelines that define who you are.</p>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-card__number">02</span>
+                    <h3>Print &amp; Editorial</h3>
+                    <p>Magazines, catalogs, posters, and packaging with meticulous typographic detail.</p>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-card__number">03</span>
+                    <h3>Digital Design</h3>
+                    <p>Social campaigns, web visuals, and motion graphics that extend your brand online.</p>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-card__number">04</span>
+                    <h3>Art Direction</h3>
+                    <p>Creative direction for photoshoots, campaigns, and multi-channel brand rollouts.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="testimonial">
+            <blockquote class="testimonial__quote reveal">
+                "Maya transformed our brand from forgettable to unforgettable.
+                Her eye for typography and color is unmatched."
+            </blockquote>
+            <cite class="testimonial__author reveal">
+                — Elena Vasquez, Creative Director at Verdant Co.
+            </cite>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="contact__grid">
+                <div class="contact__intro">
+                    <span class="section-label reveal">Contact</span>
+                    <h2 class="section-title reveal">Let's create<br>something bold</h2>
+                    <p class="contact__text reveal">
+                        Have a project in mind? I'd love to hear about it.
+                        Drop me a message and I'll get back within 48 hours.
+                    </p>
+                    <div class="contact__details reveal">
+                        <a href="mailto:hello@mayachen.design">hello@mayachen.design</a>
+                        <a href="tel:+14155550123">+1 (415) 555-0123</a>
+                    </div>
+                    <div class="contact__social reveal">
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Behance">Behance</a>
+                        <a href="#" aria-label="Dribbble">Dribbble</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+
+                <form class="contact__form reveal" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Project Type</label>
+                        <select id="project" name="project">
+                            <option value="">Select a service</option>
+                            <option value="branding">Brand Identity</option>
+                            <option value="print">Print &amp; Editorial</option>
+                            <option value="digital">Digital Design</option>
+                            <option value="direction">Art Direction</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <a href="#home" class="footer__logo">Maya Chen</a>
+            <p class="footer__copy">&copy; 2026 Maya Chen. All rights reserved.</p>
+            <a href="photography.html" class="footer__link">Photography Gallery</a>
+        </div>
+    </footer>
+
+    <script src="js/portfolio.js"></script>
+</body>
+
+</html>
