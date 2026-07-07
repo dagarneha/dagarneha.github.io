@@ -1585,6 +1585,7 @@ const PAGE_SIZE = 6;
 
   function setFilter(filter) {
     if (filter === activeFilter) return;
+    const currentY = window.scrollY;
     activeFilter = filter;
     visibleCount = PAGE_SIZE;
 
@@ -1594,8 +1595,8 @@ const PAGE_SIZE = 6;
       btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
     });
 
-    renderGrid(true);
-    grid.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+    renderGrid(false);
+    window.scrollTo({ top: currentY, behavior: 'auto' });
   }
 
   filterBtns.forEach((btn) => {
