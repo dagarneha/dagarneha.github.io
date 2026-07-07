@@ -7,7 +7,7 @@
   <title>Neha Dagar — Graphic Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="projects-page">
@@ -34,14 +34,14 @@
     <svg class="ambient-shape shape-1" viewBox="0 0 200 200">
       <defs>
         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#a594f9" stop-opacity="0.35" />
-          <stop offset="100%" stop-color="#f5efff" stop-opacity="0" />
+          <stop offset="0%" stop-color="#e8553a" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="#faf8f5" stop-opacity="0" />
         </linearGradient>
       </defs>
       <circle cx="100" cy="100" r="80" fill="url(#grad1)" />
     </svg>
     <svg class="ambient-shape shape-2" viewBox="0 0 300 300">
-      <path class="ambient-line" d="M20,150 Q150,20 280,150 T20,150" fill="none" stroke="#a594f9" stroke-width="1" />
+      <path class="ambient-line" d="M20,150 Q150,20 280,150 T20,150" fill="none" stroke="#e8553a" stroke-width="1" />
     </svg>
     <div class="ambient-grid"></div>
   </div>
@@ -55,12 +55,8 @@
 
       <ul class="nav-links" id="nav-links">
         <li><a href="#work" class="nav-link magnetic" data-cursor="hover">Work</a></li>
-        <li><a href="#certifications" class="nav-link magnetic" data-cursor="hover">Certifications</a></li>
         <li><a href="#about" class="nav-link magnetic" data-cursor="hover">About</a></li>
-        <li><a href="#services" class="nav-link magnetic" data-cursor="hover">Services</a></li>
         <li><a href="#experience" class="nav-link magnetic" data-cursor="hover">Experience</a></li>
-        <li><a href="#testimonials" class="nav-link magnetic" data-cursor="hover">Reviews</a></li>
-        <li><a href="#faq" class="nav-link magnetic" data-cursor="hover">FAQ</a></li>
         <li><a href="#contact" class="nav-link magnetic" data-cursor="hover">Contact</a></li>
       </ul>
 
@@ -138,9 +134,23 @@
         </div>
 
         <div class="hero-visual reveal" data-reveal data-parallax>
-          <div class="hero-blue-panel" aria-label="Animated portfolio showcase">
-            <div class="hero-falling-letters" data-falling-letters aria-hidden="true">
-              <p class="falling-word-line"></p>
+          <div class="hero-blue-panel hero-showcase" aria-label="Featured ProofHub marketing design">
+            <div class="hero-showcase-badge">
+              <img src="https://www.proofhub.com/wp-content/uploads/2026/04/Frame-3948.png" alt="" width="28" height="28" loading="eager" />
+              <span>ProofHub · Marketing Design</span>
+            </div>
+            <img
+              class="hero-showcase-img"
+              src="https://images.unsplash.com/photo-1611224923853-80b023f02dca?w=900&q=80"
+              alt="Featured marketing and brand design work"
+              loading="eager"
+              width="900"
+              height="600"
+            />
+            <div class="hero-showcase-tags">
+              <span>Campaigns</span>
+              <span>Brand</span>
+              <span>UI Graphics</span>
             </div>
           </div>
         </div>
@@ -253,9 +263,9 @@
             <svg class="about-profile-border" viewBox="0 0 220 220" aria-hidden="true">
               <defs>
                 <linearGradient id="aboutBorderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" class="grad-stop-1" stop-color="#a594f9" />
-                  <stop offset="50%" class="grad-stop-2" stop-color="#cdc1ff" />
-                  <stop offset="100%" class="grad-stop-3" stop-color="#e5d9f2" />
+                  <stop offset="0%" class="grad-stop-1" stop-color="#e8553a" />
+                  <stop offset="50%" class="grad-stop-2" stop-color="#ff8a65" />
+                  <stop offset="100%" class="grad-stop-3" stop-color="#ffe8e2" />
                 </linearGradient>
               </defs>
               <circle
@@ -708,7 +718,7 @@
             <span class="btn-label">Send Message</span>
             <span class="btn-spinner" aria-hidden="true"></span>
           </button>
-          <p class="form-success" id="form-success" role="status" hidden>Thank you! Your message has been sent.</p>
+          <p class="form-success" id="form-success" role="status" hidden>Your email app should open with your message pre-filled.</p>
         </form>
       </div>
     </section>
@@ -724,6 +734,8 @@
         <a href="#work" class="footer-link magnetic" data-cursor="hover">Work</a>
         <a href="#about" class="footer-link magnetic" data-cursor="hover">About</a>
         <a href="#services" class="footer-link magnetic" data-cursor="hover">Services</a>
+        <a href="#certifications" class="footer-link magnetic" data-cursor="hover">Certifications</a>
+        <a href="#faq" class="footer-link magnetic" data-cursor="hover">FAQ</a>
         <a href="#contact" class="footer-link magnetic" data-cursor="hover">Contact</a>
       </nav>
       <div class="footer-social">

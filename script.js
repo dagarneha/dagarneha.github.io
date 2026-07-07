@@ -1052,17 +1052,31 @@
 
     if (!valid) return;
 
+    const name = form.querySelector('#name')?.value.trim() || '';
+    const email = form.querySelector('#email')?.value.trim() || '';
+    const budget = form.querySelector('#budget')?.value || '';
+    const message = form.querySelector('#message')?.value.trim() || '';
+
     btn?.classList.add('is-loading');
     btn.disabled = true;
-    if (label) label.textContent = 'Loading...';
+    if (label) label.textContent = 'Opening email...';
 
-    await new Promise((r) => setTimeout(r, prefersReducedMotion ? 0 : 1500));
+    await new Promise((r) => setTimeout(r, prefersReducedMotion ? 0 : 600));
+
+    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nBudget: ${budget || 'Not specified'}\n\n${message}`
+    );
+    window.location.href = `mailto:dagarneha5@gmail.com?subject=${subject}&body=${body}`;
 
     btn?.classList.remove('is-loading');
     btn?.classList.add('is-success');
-    if (label) label.textContent = 'Message Sent!';
-    if (formSuccess) formSuccess.hidden = false;
-    showToast('Message sent successfully!');
+    if (label) label.textContent = 'Email Ready!';
+    if (formSuccess) {
+      formSuccess.textContent = 'Your email app should open with your message pre-filled. Send it from there to reach me.';
+      formSuccess.hidden = false;
+    }
+    showToast('Email draft opened — send from your mail app.');
 
     setTimeout(() => {
       btn?.classList.remove('is-success');
@@ -1130,34 +1144,61 @@ const PAGE_SIZE = 6;
       layout: 'wide',
     },
     {
-      id: 'nova-studio',
-      title: 'Nova Studio',
+      id: 'venus-remedies',
+      title: 'Venus Remedies',
       category: 'branding',
-      categoryLabel: 'Brand Identity',
-      service: 'Branding',
-      description: 'Complete rebrand for a creative agency — logo, typography, and guidelines.',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80',
-      stat: '300% ROI',
-      client: 'Nova Studio',
-      date: '2025',
-      problem: 'Nova needed a distinctive identity that stood out in a crowded agency market while feeling premium and approachable.',
-      solution: 'We built a flexible visual system anchored by a custom wordmark, bold typography pairing, and a vibrant accent palette applied across touchpoints.',
+      categoryLabel: 'Pharma Packaging',
+      service: 'Print Design',
+      description: 'Product packaging, brochures, and regulated marketing collaterals for a pharmaceutical company.',
+      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=900&q=80',
+      stat: '10 mos',
+      client: 'Venus Remedies Limited',
+      date: '2022–2023',
+      problem: 'Complex pharmaceutical information needed to be translated into clear, compliant visual communication across packaging and marketing.',
+      solution: 'Designed product packaging, brochures, internal communications, and social graphics aligned with industry visual standards.',
       results: [
-        { value: 300, suffix: '%', label: 'ROI increase' },
-        { value: 2, suffix: 'M+', label: 'Impressions' },
-        { value: 48, suffix: '%', label: 'Brand recall' },
+        { value: 10, suffix: ' mos', label: 'Tenure' },
+        { value: 100, suffix: '%', label: 'Brand compliance' },
+        { value: 3, suffix: '+', label: 'Product lines' },
       ],
-      tools: ['Figma', 'Illustrator', 'After Effects'],
+      tools: ['Illustrator', 'InDesign', 'Photoshop'],
       gallery: [
-        'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80',
-        'https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=600&q=80',
+        'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80',
       ],
       process: [
-        { title: 'Discovery', text: 'Stakeholder workshops and competitive audit.' },
-        { title: 'Identity', text: 'Logo explorations and system architecture.' },
-        { title: 'Rollout', text: 'Guidelines, templates, and launch assets.' },
+        { title: 'Research', text: 'Review regulatory and brand requirements.' },
+        { title: 'Design', text: 'Create packaging and collateral layouts.' },
+        { title: 'Deliver', text: 'Prepare print-ready production files.' },
       ],
       layout: 'wide',
+    },
+    {
+      id: 'ultra-healthcare',
+      title: 'Ultra Healthcare',
+      category: 'campaign',
+      categoryLabel: 'Healthcare Branding',
+      service: 'Brand Design',
+      description: 'Branding materials, print collaterals, and social infographics for a healthcare company.',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=900&q=80',
+      stat: '1 yr 5 mos',
+      client: 'Ultra Healthcare Official',
+      date: '2021–2022',
+      problem: 'Ultra Healthcare needed consistent branding and educational visuals that met healthcare regulations.',
+      solution: 'Built branding materials, product illustrations, social content, and infographics for customer education.',
+      results: [
+        { value: 17, suffix: ' mos', label: 'Tenure' },
+        { value: 100, suffix: '%', label: 'Regulatory alignment' },
+        { value: 4, suffix: '+', label: 'Campaign types' },
+      ],
+      tools: ['Illustrator', 'Photoshop', 'InDesign'],
+      gallery: [
+        'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&q=80',
+      ],
+      process: [
+        { title: 'Brief', text: 'Gather requirements with marketing teams.' },
+        { title: 'Create', text: 'Design collaterals and social infographics.' },
+        { title: 'Review', text: 'Ensure accuracy with healthcare guidelines.' },
+      ],
     },
     {
       id: 'lumen-finance',
@@ -1582,7 +1623,16 @@ const PAGE_SIZE = 6;
   });
 
   loadMoreBtn?.addEventListener('click', () => {
-    window.location.href = 'more-projects.html';
+    if (loadMoreBtn.classList.contains('is-loading')) return;
+    loadMoreBtn.classList.add('is-loading');
+    setTimeout(() => {
+      visibleCount += PAGE_SIZE;
+      renderGrid(false);
+      loadMoreBtn.classList.remove('is-loading');
+      if (visibleCount >= filteredList.length) {
+        loadMoreBtn.querySelector('.btn-label').textContent = `All ${filteredList.length} projects shown`;
+      }
+    }, prefersReducedMotion ? 0 : 400);
   });
 
   function getProjectIndex(id) {
