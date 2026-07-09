@@ -32,6 +32,26 @@ python3 -m http.server 8080
 
 Visit http://localhost:8080 — use Cursor’s **Ports** panel to forward port 8080 if opening from your local browser.
 
+## Site versions
+
+| Page | Theme |
+|------|-------|
+| `index.html` | Warm coral & charcoal (default) |
+| `index-pastel.html` | Pastel dream — thistle, petal pink, baby pink, icy & sky blue |
+| `homepage-v2.html` | Experimental dark Awwwards-style (not in main nav) |
+
+### Pastel palette (`index-pastel.html`)
+
+| Token | Color |
+|-------|-------|
+| Thistle | `#CDB4DB` |
+| Pastel petal | `#FFC8DD` |
+| Baby pink | `#FFAFCC` |
+| Icy blue | `#BDE0FE` |
+| Sky blue | `#A2D2FF` |
+
+Theme overrides live in `css/theme-pastel.css`.
+
 ## Customize
 
 - Edit project data in `initProjectsShowcase()` inside `script.js`
