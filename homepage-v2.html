@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Neha Dagar — Experimental V2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/homepage-v2.css" />
+</head>
+<body class="v2-body">
+  <a href="index.html" class="v2-escape" aria-label="Back to main site">↩ Classic</a>
+
+  <div class="v2-grain" aria-hidden="true"></div>
+  <div class="v2-chroma" aria-hidden="true"></div>
+
+  <div class="v2-cursor" id="v2-cursor" aria-hidden="true">
+    <span class="v2-cursor-core"></span>
+    <span class="v2-cursor-orbit"></span>
+  </div>
+
+  <div class="v2-loader" id="v2-loader" aria-hidden="true">
+    <svg class="v2-loader-path" viewBox="0 0 200 200">
+      <path id="loader-path" d="M100,20 C160,20 180,80 100,100 C20,120 40,180 100,180" fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    <span class="v2-loader-text" data-scramble="INITIALIZING">INITIALIZING</span>
+  </div>
+
+  <header class="v2-header" id="v2-header">
+    <div class="v2-header-inner">
+      <span class="v2-logo" data-magnetic>ND<span class="v2-logo-dot">.</span></span>
+      <div class="v2-scroll-meter">
+        <span class="v2-scroll-label">DRIFT</span>
+        <div class="v2-scroll-track"><span class="v2-scroll-fill" id="scroll-fill"></span></div>
+        <span class="v2-scroll-pct" id="scroll-pct">000</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll spine SVG — path tracks entire page -->
+  <svg class="v2-spine" id="v2-spine" aria-hidden="true" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="spineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#ff4d00" />
+        <stop offset="35%" stop-color="#00f0ff" />
+        <stop offset="70%" stop-color="#b026ff" />
+        <stop offset="100%" stop-color="#ffe600" />
+      </linearGradient>
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="3" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <path id="spine-path" class="v2-spine-path" fill="none" stroke="url(#spineGrad)" stroke-width="2" filter="url(#glow)" />
+    <path id="spine-path-ghost" class="v2-spine-path-ghost" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="8" />
+    <circle id="spine-node" class="v2-spine-node" r="8" fill="#fff" />
+    <circle id="spine-node-glow" class="v2-spine-node-glow" r="20" fill="url(#spineGrad)" opacity="0.35" />
+  </svg>
+
+  <main class="v2-main" id="v2-main">
+    <section class="v2-panel v2-hero" id="panel-hero" data-theme="void">
+      <div class="v2-hero-grid">
+        <div class="v2-hero-copy">
+          <p class="v2-kicker"><span class="v2-kicker-line"></span> GRAPHIC DESIGNER · PROOFHUB · 2026</p>
+          <h1 class="v2-hero-title">
+            <span class="v2-title-row" data-split>NEHA</span>
+            <span class="v2-title-row v2-title-row--ghost" data-split>DAGAR</span>
+            <span class="v2-title-row v2-title-row--accent" data-split>UNSEEN</span>
+          </h1>
+          <p class="v2-hero-sub">A scroll-driven dimension where vectors breathe, type fractures, and every pixel refuses to sit still.</p>
+          <div class="v2-hero-actions">
+            <button class="v2-btn v2-btn--fire" data-magnetic data-scroll="#panel-work">Enter the work</button>
+            <button class="v2-btn v2-btn--ghost" data-magnetic data-scroll="#panel-contact">Distort reality</button>
+          </div>
+        </div>
+        <div class="v2-hero-orbit" aria-hidden="true">
+          <svg class="v2-orbit-svg" viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="160" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            <circle cx="200" cy="200" r="120" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <path id="orbit-ring" d="M200,40 A160,160 0 1,1 199,40" fill="none" stroke="#00f0ff" stroke-width="2" stroke-dasharray="8 12"/>
+          </svg>
+          <div class="v2-orbit-core">
+            <img src="https://www.proofhub.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/ph5.2/images/about/career/ph-employee-12.png.webp" alt="" width="120" height="120" />
+          </div>
+        </div>
+      </div>
+      <div class="v2-hero-marquee" aria-hidden="true">
+        <div class="v2-marquee-track">
+          <span>BRAND SYSTEMS</span><span>◆</span><span>CAMPAIGN ART</span><span>◆</span><span>PRODUCT VISUALS</span><span>◆</span><span>EDITORIAL TYPE</span><span>◆</span>
+          <span>BRAND SYSTEMS</span><span>◆</span><span>CAMPAIGN ART</span><span>◆</span><span>PRODUCT VISUALS</span><span>◆</span><span>EDITORIAL TYPE</span><span>◆</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-panel v2-manifesto" id="panel-manifesto" data-theme="invert">
+      <div class="v2-panel-inner">
+        <span class="v2-index">01</span>
+        <blockquote class="v2-manifesto-text">
+          <span class="v2-manifesto-line">I don't decorate screens.</span>
+          <span class="v2-manifesto-line">I engineer <em>visual gravity</em></span>
+          <span class="v2-manifesto-line">that pulls meaning</span>
+          <span class="v2-manifesto-line">through the noise.</span>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="v2-panel v2-work" id="panel-work" data-theme="neon">
+      <div class="v2-panel-head">
+        <span class="v2-index">02</span>
+        <h2 class="v2-section-title">Selected<br><span>Distortions</span></h2>
+      </div>
+      <div class="v2-horizontal" id="v2-horizontal">
+        <div class="v2-horizontal-track" id="horizontal-track">
+          <article class="v2-card" data-tilt>
+            <div class="v2-card-visual">
+              <img src="https://images.unsplash.com/photo-1611224923853-80b023f02dca?w=800&q=80" alt="ProofHub marketing" loading="lazy" />
+              <span class="v2-card-num">01</span>
+            </div>
+            <div class="v2-card-body">
+              <h3>ProofHub Marketing</h3>
+              <p>SaaS campaigns · Global reach</p>
+            </div>
+          </article>
+          <article class="v2-card" data-tilt>
+            <div class="v2-card-visual">
+              <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&q=80" alt="Venus packaging" loading="lazy" />
+              <span class="v2-card-num">02</span>
+            </div>
+            <div class="v2-card-body">
+              <h3>Venus Remedies</h3>
+              <p>Pharma packaging · Print systems</p>
+            </div>
+          </article>
+          <article class="v2-card" data-tilt>
+            <div class="v2-card-visual">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Healthcare branding" loading="lazy" />
+              <span class="v2-card-num">03</span>
+            </div>
+            <div class="v2-card-body">
+              <h3>Ultra Healthcare</h3>
+              <p>Brand collaterals · Infographics</p>
+            </div>
+          </article>
+          <article class="v2-card" data-tilt>
+            <div class="v2-card-visual">
+              <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80" alt="Brand identity" loading="lazy" />
+              <span class="v2-card-num">04</span>
+            </div>
+            <div class="v2-card-body">
+              <h3>Brand Systems</h3>
+              <p>Identity · Typography · Guidelines</p>
+            </div>
+          </article>
+          <article class="v2-card" data-tilt>
+            <div class="v2-card-visual">
+              <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=800&q=80" alt="Campaign art" loading="lazy" />
+              <span class="v2-card-num">05</span>
+            </div>
+            <div class="v2-card-body">
+              <h3>Campaign Art</h3>
+              <p>Social · Motion · Rollout</p>
+            </div>
+          </article>
+        </div>
+        <div class="v2-horizontal-hint">
+          <span>← DRAG OR SCROLL →</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-panel v2-lab" id="panel-lab" data-theme="void">
+      <div class="v2-panel-inner v2-lab-grid">
+        <div class="v2-lab-copy">
+          <span class="v2-index">03</span>
+          <h2 class="v2-section-title">Design<br><span>Lab</span></h2>
+          <p class="v2-lab-desc">Live parameters mapped to your scroll velocity. The faster you move, the more the grid fractures.</p>
+          <ul class="v2-lab-stats" id="v2-lab-stats">
+            <li><span class="v2-stat-val" id="stat-velocity">0</span><span class="v2-stat-label">px/s velocity</span></li>
+            <li><span class="v2-stat-val" id="stat-path">0</span><span class="v2-stat-label">path progress</span></li>
+            <li><span class="v2-stat-val" id="stat-depth">0</span><span class="v2-stat-label">z-depth</span></li>
+          </ul>
+        </div>
+        <div class="v2-lab-canvas" id="v2-lab-canvas" aria-hidden="true">
+          <svg viewBox="0 0 500 500" class="v2-lab-svg">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <rect width="500" height="500" fill="url(#grid)" />
+            <path id="lab-wave" d="M0,250 Q125,150 250,250 T500,250" fill="none" stroke="#ff4d00" stroke-width="2"/>
+            <path id="lab-wave-2" d="M0,280 Q125,380 250,280 T500,280" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.7"/>
+            <circle id="lab-pulse" cx="250" cy="250" r="60" fill="none" stroke="#b026ff" stroke-width="1" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-panel v2-stack" id="panel-stack" data-theme="paper">
+      <div class="v2-stack-wrap">
+        <div class="v2-stack-card" data-stack="0">
+          <span class="v2-stack-tag">Typography</span>
+          <h3>Letters as architecture</h3>
+        </div>
+        <div class="v2-stack-card" data-stack="1">
+          <span class="v2-stack-tag">Color</span>
+          <h3>Chromatic collisions</h3>
+        </div>
+        <div class="v2-stack-card" data-stack="2">
+          <span class="v2-stack-tag">Motion</span>
+          <h3>Scroll as conductor</h3>
+        </div>
+        <div class="v2-stack-card" data-stack="3">
+          <span class="v2-stack-tag">Systems</span>
+          <h3>Brand at scale</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-panel v2-contact" id="panel-contact" data-theme="fire">
+      <div class="v2-contact-inner">
+        <span class="v2-index">04</span>
+        <h2 class="v2-contact-title">
+          <span data-scramble="LET'S">LET'S</span>
+          <span data-scramble="COLLIDE">COLLIDE</span>
+        </h2>
+        <p class="v2-contact-sub">Ready to break the grid together?</p>
+        <div class="v2-contact-links">
+          <a href="mailto:dagarneha5@gmail.com" class="v2-btn v2-btn--fire" data-magnetic>dagarneha5@gmail.com</a>
+          <a href="https://www.linkedin.com/in/dagarneha5/" target="_blank" rel="noopener noreferrer" class="v2-btn v2-btn--ghost" data-magnetic>LinkedIn</a>
+        </div>
+        <a href="index.html" class="v2-back-link">← Return to classic portfolio</a>
+      </div>
+      <svg class="v2-contact-burst" viewBox="0 0 800 800" aria-hidden="true">
+        <path id="burst-path" d="M400,400 m-200,0 a200,200 0 1,0 400,0 a200,200 0 1,0 -400,0" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4 8"/>
+      </svg>
+    </section>
+  </main>
+
+  <script src="js/homepage-v2.js"></script>
+</body>
+</html>
