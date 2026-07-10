@@ -17,6 +17,9 @@
 }
 
 body.theme-pastel {
+  --font-headline: 'Fraunces', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+
   --palette-soft: var(--pastel-petal);
   --palette-light: #fff9fc;
   --palette-mid: var(--baby-pink);
@@ -29,26 +32,38 @@ body.theme-pastel {
   --accent: var(--baby-pink);
   --accent-mid: var(--pastel-petal);
   --accent-soft: #ffe8f3;
-  --accent-dark: #c97a99;
+  --accent-dark: #b84d75;
   --accent-glow: rgba(var(--baby-pink-rgb), 0.42);
   --accent-rgb: var(--baby-pink-rgb);
   --primary-rgb: 42, 36, 56;
+
+  /* Single accent system: brand pink for fills, ink pink for text/links */
+  --accent-brand: #ffafcc;
+  --accent-ink: #b84d75;
 
   --neutral-white: #ffffff;
   --neutral-light: #fff9fc;
   --neutral-dark: var(--primary);
   --text-dark: #2a2438;
-  --text-muted: #6b5f78;
-  --text-secondary: #807592;
-  --text-tertiary: #a399b0;
+  --text-muted: #544e62;
+  --text-secondary: #6a6178;
+  --text-tertiary: #8a8094;
   --text-on-accent: #2a2438;
-  --accent-text: #b86b8a;
+  --accent-text: var(--accent-ink);
 
   --glass-bg: rgba(255, 255, 255, 0.74);
   --glass-border: rgba(var(--thistle-rgb), 0.38);
   --gold-glow: rgba(var(--sky-blue-rgb), 0.45);
   --editorial-bg: #f3ecff;
   --editorial-line: var(--primary);
+
+  /* Typography scale */
+  --type-hero: clamp(3.5rem, 5.5vw, 4rem);
+  --type-section: clamp(2.25rem, 3.5vw, 2.5rem);
+  --type-card-title: 1.375rem;
+  --type-body: 1.0625rem;
+  --type-micro: 0.8125rem;
+  --leading-body: 1.55;
 }
 
 /* Header & navigation */
@@ -68,7 +83,7 @@ body.theme-pastel .logo-mark {
 }
 
 body.theme-pastel .btn-primary {
-  background: linear-gradient(135deg, var(--baby-pink), var(--pastel-petal));
+  background: linear-gradient(135deg, var(--accent-brand), var(--pastel-petal));
   color: var(--primary);
   border-color: rgba(var(--thistle-rgb), 0.45);
   box-shadow: 0 8px 24px rgba(var(--baby-pink-rgb), 0.35);
@@ -106,13 +121,6 @@ body.theme-pastel .hero-bg-mesh {
   background:
     radial-gradient(ellipse 70% 50% at 15% 30%, rgba(var(--baby-pink-rgb), 0.28), transparent 55%),
     radial-gradient(ellipse 50% 40% at 85% 70%, rgba(var(--sky-blue-rgb), 0.32), transparent 50%);
-}
-
-body.theme-pastel .title-accent {
-  background: linear-gradient(135deg, var(--baby-pink), var(--sky-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 body.theme-pastel .eyebrow-line,
@@ -197,7 +205,10 @@ body.theme-pastel .marquee-dot {
 body.theme-pastel .stat-num,
 body.theme-pastel .stat-box-num,
 body.theme-pastel .projects-stat-num {
-  color: #9d6b88;
+  color: var(--accent-ink);
+  font-size: clamp(1.75rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.15;
 }
 
 body.theme-pastel .about-profile-stroke {
@@ -253,7 +264,7 @@ body.theme-pastel .contact-bg-gradient {
 }
 
 body.theme-pastel .contact-method:hover {
-  color: #9d6b88;
+  color: var(--accent-ink);
 }
 
 body.theme-pastel .form-group input:focus,
@@ -350,4 +361,290 @@ body.theme-pastel .faq-item:hover {
     background: rgba(255, 249, 252, 0.98);
     border-right-color: rgba(var(--thistle-rgb), 0.35);
   }
+}
+
+/* ============================================
+   AUDIT PASS — Typography, contrast, sections
+   ============================================ */
+
+/* --- 1. Typography hierarchy --- */
+body.theme-pastel .hero-title {
+  font-size: var(--type-hero);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+body.theme-pastel .hero-desc,
+body.theme-pastel .about-text,
+body.theme-pastel .service-desc,
+body.theme-pastel .contact-desc,
+body.theme-pastel .certifications-intro,
+body.theme-pastel .projects-hero-sub {
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+body.theme-pastel .section-title,
+body.theme-pastel .projects-hero-title-text {
+  font-size: var(--type-section);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+body.theme-pastel .section-title-inner em,
+body.theme-pastel .hero-title em,
+body.theme-pastel .title-accent {
+  font-family: var(--font-headline);
+  font-style: italic;
+  font-weight: 400;
+}
+
+body.theme-pastel .title-accent {
+  background: linear-gradient(135deg, var(--accent-brand), var(--sky-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.theme-pastel .section-title-inner em {
+  color: var(--accent-ink);
+  background: none;
+  -webkit-text-fill-color: var(--accent-ink);
+}
+
+body.theme-pastel,
+body.theme-pastel h1,
+body.theme-pastel h2,
+body.theme-pastel h3,
+body.theme-pastel h4,
+body.theme-pastel h5,
+body.theme-pastel h6 {
+  font-family: var(--font-headline);
+}
+
+body.theme-pastel {
+  font-family: var(--font-body);
+}
+
+body.theme-pastel .nav-link,
+body.theme-pastel .btn,
+body.theme-pastel .section-tag,
+body.theme-pastel .hero-eyebrow,
+body.theme-pastel .projects-hero-eyebrow,
+body.theme-pastel .stat-label,
+body.theme-pastel .stat-box-label,
+body.theme-pastel .project-card-badge,
+body.theme-pastel .timeline-badge,
+body.theme-pastel .timeline-duration,
+body.theme-pastel .faq-num,
+body.theme-pastel .pastel-switch {
+  font-family: var(--font-body);
+}
+
+body.theme-pastel .section-tag,
+body.theme-pastel .hero-eyebrow,
+body.theme-pastel .projects-hero-eyebrow {
+  font-size: var(--type-micro);
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+body.theme-pastel .stat-label,
+body.theme-pastel .stat-box-label {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+body.theme-pastel .stat-num + .stat-label,
+body.theme-pastel .stat-box-num + .stat-box-label {
+  margin-top: 0.35rem;
+}
+
+body.theme-pastel .project-card-title {
+  font-size: var(--type-card-title);
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+body.theme-pastel .project-card-badge {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+body.theme-pastel .project-card-service {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+body.theme-pastel .project-card-stat {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--accent-ink);
+  margin-top: 0.45rem;
+}
+
+body.theme-pastel .project-card-desc {
+  font-size: 0.9375rem;
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+  margin-top: 0.55rem;
+}
+
+/* --- 2. Contrast fixes for micro copy --- */
+body.theme-pastel .award-date,
+body.theme-pastel .award-credential,
+body.theme-pastel .award-org {
+  color: var(--text-muted);
+  font-size: var(--type-micro);
+}
+
+body.theme-pastel .faq-num {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+body.theme-pastel .timeline-duration {
+  color: var(--text-muted);
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+body.theme-pastel .certifications-intro a,
+body.theme-pastel .faq-answer-inner a,
+body.theme-pastel .bio-highlight {
+  color: var(--accent-ink);
+}
+
+/* --- 3. Section background rhythm --- */
+body.theme-pastel .hero {
+  background: linear-gradient(180deg, #fff9fc 0%, #fdeef5 100%);
+}
+
+body.theme-pastel .projects-showcase .projects-hero--section {
+  background: #ffffff;
+}
+
+body.theme-pastel .projects-grid-section {
+  background: #ffffff;
+  padding-bottom: 4rem;
+}
+
+body.theme-pastel .certifications {
+  background: #f3ecff;
+}
+
+body.theme-pastel .about {
+  background: #ffffff;
+}
+
+body.theme-pastel .signature-direction {
+  background: #fff0f6;
+}
+
+body.theme-pastel .services {
+  background: #ffffff;
+}
+
+body.theme-pastel .experience {
+  background: #eef5ff;
+}
+
+body.theme-pastel .testimonials {
+  background: #ffffff;
+}
+
+body.theme-pastel .faq {
+  background: #f7f2ff;
+}
+
+body.theme-pastel .footer {
+  background: #ffffff;
+  border-top: 1px solid rgba(var(--thistle-rgb), 0.3);
+}
+
+/* --- 4. About photo visibility --- */
+body.theme-pastel .about-profile-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.theme-pastel .about-image-overlay {
+  opacity: 0.25;
+}
+
+/* --- 5. Timeline current role --- */
+body.theme-pastel .timeline-item--current .timeline-marker {
+  width: 18px;
+  height: 18px;
+  background: var(--accent-brand);
+  border: 3px solid var(--accent-ink);
+  box-shadow: 0 0 0 6px rgba(var(--baby-pink-rgb), 0.35);
+}
+
+body.theme-pastel .timeline-item--current .timeline-role {
+  font-size: 1.375rem;
+  color: var(--primary);
+}
+
+body.theme-pastel .timeline-item--current .timeline-card {
+  border-color: rgba(var(--baby-pink-rgb), 0.55);
+  box-shadow: 0 12px 36px rgba(var(--thistle-rgb), 0.15);
+}
+
+body.theme-pastel .timeline-badge {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: var(--type-micro);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: var(--accent-brand);
+  border: 1px solid rgba(var(--thistle-rgb), 0.35);
+}
+
+body.theme-pastel .timeline-item:not(.timeline-item--current) .timeline-role {
+  color: var(--text-secondary);
+}
+
+/* --- 6. Testimonial single block --- */
+body.theme-pastel .testimonial-single {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+body.theme-pastel .testimonial-single .testimonial-card {
+  opacity: 1;
+  transform: none;
+}
+
+body.theme-pastel .testimonial-text {
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  color: var(--text-dark);
+}
+
+body.theme-pastel .hero-showcase-tags span {
+  font-size: var(--type-micro);
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+body.theme-pastel .testimonial-role {
+  font-size: var(--type-micro);
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
 }

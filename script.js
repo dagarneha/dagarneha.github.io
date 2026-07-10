@@ -1112,7 +1112,7 @@
 
 const PAGE_SIZE = 6;
 
-  const PROJECTS = [
+  const PROJECTS = window.PASTEL_PROJECTS ?? [
     {
       id: 'proofhub-marketing',
       title: 'ProofHub Marketing',
