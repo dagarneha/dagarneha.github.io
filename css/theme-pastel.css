@@ -17,6 +17,9 @@
 }
 
 body.theme-pastel {
+  --font-headline: 'Fraunces', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+
   --palette-soft: var(--pastel-petal);
   --palette-light: #fff9fc;
   --palette-mid: var(--baby-pink);
@@ -118,16 +121,6 @@ body.theme-pastel .hero-bg-mesh {
   background:
     radial-gradient(ellipse 70% 50% at 15% 30%, rgba(var(--baby-pink-rgb), 0.28), transparent 55%),
     radial-gradient(ellipse 50% 40% at 85% 70%, rgba(var(--sky-blue-rgb), 0.32), transparent 50%);
-}
-
-body.theme-pastel .title-accent {
-  background: linear-gradient(135deg, var(--accent-brand), var(--sky-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-family: var(--font-headline);
-  font-style: italic;
-  font-weight: 400;
 }
 
 body.theme-pastel .eyebrow-line,
@@ -399,11 +392,53 @@ body.theme-pastel .projects-hero-title-text {
 }
 
 body.theme-pastel .section-title-inner em,
-body.theme-pastel .hero-title em {
+body.theme-pastel .hero-title em,
+body.theme-pastel .title-accent {
   font-family: var(--font-headline);
   font-style: italic;
   font-weight: 400;
+}
+
+body.theme-pastel .title-accent {
+  background: linear-gradient(135deg, var(--accent-brand), var(--sky-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.theme-pastel .section-title-inner em {
   color: var(--accent-ink);
+  background: none;
+  -webkit-text-fill-color: var(--accent-ink);
+}
+
+body.theme-pastel,
+body.theme-pastel h1,
+body.theme-pastel h2,
+body.theme-pastel h3,
+body.theme-pastel h4,
+body.theme-pastel h5,
+body.theme-pastel h6 {
+  font-family: var(--font-headline);
+}
+
+body.theme-pastel {
+  font-family: var(--font-body);
+}
+
+body.theme-pastel .nav-link,
+body.theme-pastel .btn,
+body.theme-pastel .section-tag,
+body.theme-pastel .hero-eyebrow,
+body.theme-pastel .projects-hero-eyebrow,
+body.theme-pastel .stat-label,
+body.theme-pastel .stat-box-label,
+body.theme-pastel .project-card-badge,
+body.theme-pastel .timeline-badge,
+body.theme-pastel .timeline-duration,
+body.theme-pastel .faq-num,
+body.theme-pastel .pastel-switch {
+  font-family: var(--font-body);
 }
 
 body.theme-pastel .section-tag,
