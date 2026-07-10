@@ -12,8 +12,8 @@ Portfolio site for **Neha Dagar**, Graphic Designer at ProofHub.
 | Text | `#1A1714` |
 | Muted | `#6B6560` |
 
-- **Headlines:** Instrument Serif
-- **Body:** DM Sans
+- **Headlines:** Fraunces
+- **Body:** Plus Jakarta Sans
 
 ## Features
 
