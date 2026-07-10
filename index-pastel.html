@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Neha Dagar — Graphic Designer. Pastel edition portfolio with dreamy pink and blue tones." />
+  <title>Neha Dagar — Graphic Designer (Pastel)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/theme-pastel.css" />
+</head>
+<body class="theme-pastel">
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress-bar" id="scroll-progress-bar"></span></div>
+
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor-inner">
+      <span class="cursor-dot"></span>
+      <span class="cursor-ring"></span>
+    </div>
+  </div>
+
+  <div class="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <svg class="loader-svg" viewBox="0 0 100 100">
+        <circle class="loader-track" cx="50" cy="50" r="42" />
+        <circle class="loader-progress" cx="50" cy="50" r="42" />
+      </svg>
+      <span class="loader-text">Loading</span>
+    </div>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <svg class="ambient-shape shape-1" viewBox="0 0 200 200">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffafcc" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="#fff9fc" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <circle cx="100" cy="100" r="80" fill="url(#grad1)" />
+    </svg>
+    <svg class="ambient-shape shape-2" viewBox="0 0 300 300">
+      <path class="ambient-line" d="M20,150 Q150,20 280,150 T20,150" fill="none" stroke="#cdb4db" stroke-width="1" />
+    </svg>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <header class="header" data-header>
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#" class="nav-logo magnetic" data-cursor="hover">
+        <span class="logo-mark">ND</span>
+        <span class="logo-text">Neha Dagar</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#work" class="nav-link magnetic" data-cursor="hover">Work</a></li>
+        <li><a href="#about" class="nav-link magnetic" data-cursor="hover">About</a></li>
+        <li><a href="#experience" class="nav-link magnetic" data-cursor="hover">Experience</a></li>
+        <li><a href="#contact" class="nav-link magnetic" data-cursor="hover">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta btn btn-primary magnetic" data-cursor="hover">
+        <span class="btn-label">Let's Talk</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-bg-mesh"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-floaters" aria-hidden="true">
+            <span class="floater floater-1">◆</span>
+            <span class="floater floater-2">○</span>
+            <span class="floater floater-3">✦</span>
+            <span class="floater floater-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1"/></svg>
+            </span>
+            <span class="floater floater-5">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L18 18H2L10 2Z" stroke="currentColor" stroke-width="1"/></svg>
+            </span>
+            <span class="floater floater-6">□</span>
+          </div>
+
+          <p class="hero-eyebrow hero-intro">
+            <span class="eyebrow-line"></span>
+            Graphic Designer at ProofHub
+          </p>
+          <h1 class="hero-title hero-headline hero-intro">
+            <span class="title-line">Every pixel</span>
+            <span class="title-line title-accent">with purpose</span>
+            <span class="title-line">and clarity.</span>
+          </h1>
+          <p class="hero-desc hero-subheading hero-intro">
+            I design marketing assets, product graphics, and brand visuals for ProofHub — helping teams plan, collaborate, and do their best work through clear, purposeful design.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary btn-hero-cta btn-ripple hero-intro hero-intro-cta" data-cursor="hover">
+              <span class="btn-label">View Portfolio</span>
+            </a>
+            <a href="#contact" class="btn btn-ghost btn-ripple hero-intro hero-intro-cta-2" data-cursor="hover">
+              <span class="btn-label">Start a Project</span>
+            </a>
+          </div>
+          <div class="hero-stats reveal" data-reveal>
+            <div class="stat">
+              <span class="stat-num" data-count="5">0</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <span class="stat-divider" aria-hidden="true"></span>
+            <div class="stat">
+              <span class="stat-num" data-count="3">0</span>
+              <span class="stat-label">Companies</span>
+            </div>
+            <span class="stat-divider" aria-hidden="true"></span>
+            <div class="stat">
+              <span class="stat-num">Chandigarh</span>
+              <span class="stat-label">India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-reveal data-parallax>
+          <div class="hero-blue-panel hero-showcase" aria-label="Featured ProofHub marketing design">
+            <div class="hero-showcase-badge">
+              <img src="https://www.proofhub.com/wp-content/uploads/2026/04/Frame-3948.png" alt="" width="28" height="28" loading="eager" />
+              <span>ProofHub · Marketing Design</span>
+            </div>
+            <img
+              class="hero-showcase-img"
+              src="https://images.unsplash.com/photo-1611224923853-80b023f02dca?w=900&q=80"
+              alt="Featured marketing and brand design work"
+              loading="eager"
+              width="900"
+              height="600"
+            />
+            <div class="hero-showcase-tags">
+              <span>Campaigns</span>
+              <span>Brand</span>
+              <span>UI Graphics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#work" class="scroll-indicator" aria-label="Scroll to work">
+        <span class="scroll-text">Scroll</span>
+        <span class="scroll-arrow" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 4v12M10 16l-4-4M10 16l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </section>
+
+    <section class="section work projects-showcase" id="work">
+      <div class="projects-hero projects-hero--section" aria-labelledby="projects-hero-title">
+        <div class="projects-hero-bg" aria-hidden="true">
+          <div class="projects-hero-gradient"></div>
+          <div class="projects-hero-floaters">
+            <span class="projects-floater projects-floater--1">◆</span>
+            <span class="projects-floater projects-floater--2">○</span>
+            <span class="projects-floater projects-floater--3">△</span>
+            <span class="projects-floater projects-floater--4">□</span>
+          </div>
+        </div>
+        <div class="projects-hero-content container">
+          <p class="projects-hero-eyebrow projects-hero-intro">Portfolio</p>
+          <h2 id="projects-hero-title" class="projects-hero-title projects-hero-intro">
+            <span class="projects-hero-title-text">Selected Work</span>
+            <span class="projects-hero-underline" aria-hidden="true"></span>
+          </h2>
+          <p class="projects-hero-sub projects-hero-intro" id="projects-hero-sub">
+            A showcase of <strong id="project-count">9</strong> projects across branding, UI/UX, web, and motion
+          </p>
+
+          <div class="projects-search-wrap projects-hero-intro">
+            <label class="projects-search-label" for="project-search">Search projects</label>
+            <div class="projects-search">
+              <svg class="projects-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M20 20l-3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <input type="search" id="project-search" class="projects-search-input" placeholder="Search projects..." autocomplete="off" />
+              <button type="button" class="projects-search-clear" id="search-clear" aria-label="Clear search" hidden>×</button>
+            </div>
+            <p class="projects-results-count" id="results-count" aria-live="polite"></p>
+          </div>
+
+          <div class="projects-filters projects-hero-intro" role="tablist" aria-label="Filter projects">
+            <button type="button" class="projects-filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button type="button" class="projects-filter" data-filter="branding" role="tab" aria-selected="false">Branding</button>
+            <button type="button" class="projects-filter" data-filter="ui-ux" role="tab" aria-selected="false">UI/UX</button>
+            <button type="button" class="projects-filter" data-filter="web-design" role="tab" aria-selected="false">Web Design</button>
+            <button type="button" class="projects-filter" data-filter="video" role="tab" aria-selected="false">Video</button>
+            <button type="button" class="projects-filter" data-filter="campaign" role="tab" aria-selected="false">Campaign</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="projects-grid-section" aria-labelledby="projects-grid-heading">
+        <div class="container">
+          <h3 id="projects-grid-heading" class="visually-hidden">Project gallery</h3>
+          <div class="projects-grid" id="projects-grid" role="list"></div>
+          <p class="projects-empty" id="projects-empty" hidden>No projects found. Try another search or filter.</p>
+          <div class="projects-load-wrap">
+            <button type="button" class="btn btn-primary btn-load-more btn-ripple" id="load-more" data-cursor="hover">
+              <span class="btn-label">Load More Projects</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="section awards certifications" id="certifications">
+      <div class="awards-pattern" aria-hidden="true">
+        <div class="awards-pattern-grid"></div>
+        <div class="awards-pattern-dots"></div>
+        <svg class="awards-pattern-lines" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
+          <path class="awards-line" d="M0,120 Q300,80 600,140 T1200,100" fill="none" stroke="rgba(232,85,58,0.12)" stroke-width="1" />
+          <path class="awards-line" d="M0,320 Q400,280 800,340 T1200,300" fill="none" stroke="rgba(255,138,101,0.14)" stroke-width="1" />
+          <path class="awards-line" d="M0,480 Q350,440 700,500 T1200,460" fill="none" stroke="rgba(232,85,58,0.08)" stroke-width="1" />
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="section-header section-header--center" data-section-header>
+          <span class="section-tag section-heading-sub">Credentials</span>
+          <h2 class="section-title section-heading-main">
+            <span class="section-title-wrap">
+              <span class="section-title-inner">Licenses &amp; <em>certifications</em></span>
+              <span class="section-title-underline" aria-hidden="true"></span>
+            </span>
+          </h2>
+          <p class="certifications-intro">
+            Professional credentials from my
+            <a href="https://www.linkedin.com/in/dagarneha5/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>.
+          </p>
+        </div>
+
+        <ul class="awards-list certifications-list" id="certifications-list" data-certifications-list aria-label="Licenses and certifications"></ul>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-visual" data-about-visual>
+          <div class="about-profile" data-about-profile>
+            <svg class="about-profile-border" viewBox="0 0 220 220" aria-hidden="true">
+              <defs>
+                <linearGradient id="aboutBorderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" class="grad-stop-1" stop-color="#ffafcc" />
+                  <stop offset="50%" class="grad-stop-2" stop-color="#bde0fe" />
+                  <stop offset="100%" class="grad-stop-3" stop-color="#ffc8dd" />
+                </linearGradient>
+              </defs>
+              <circle
+                class="about-profile-stroke"
+                cx="110"
+                cy="110"
+                r="102"
+                fill="none"
+                stroke="url(#aboutBorderGradient)"
+                stroke-width="3"
+                stroke-dasharray="14 18"
+                stroke-linecap="round"
+              />
+            </svg>
+            <div class="about-profile-media">
+              <div class="about-image-overlay" aria-hidden="true"></div>
+              <img
+                class="about-profile-img"
+                src="https://www.proofhub.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/ph5.2/images/about/career/ph-employee-12.png.webp"
+                alt="Neha Dagar, Graphic Designer at ProofHub"
+                width="480"
+                height="480"
+                loading="lazy"
+                data-about-image
+              />
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-heading-block" data-section-header>
+            <span class="section-tag section-heading-sub">About Me</span>
+            <h2 class="section-title section-heading-main">
+              <span class="section-title-wrap">
+                <span class="section-title-inner">Design that brings <em>clarity</em></span>
+                <span class="section-title-underline" aria-hidden="true"></span>
+              </span>
+            </h2>
+          </div>
+          <div class="about-bio" data-about-bio>
+            <p class="about-text about-bio-para">
+              I'm <strong class="bio-highlight">Neha Dagar</strong> — a <strong class="bio-highlight">Graphic Designer at ProofHub</strong> with 5+ years of experience across SaaS, pharmaceutical, and healthcare design. Based in Chandigarh, I deliver marketing assets, UI illustrations, and brand systems that bring clarity to complex products.
+            </p>
+            <p class="about-text about-bio-para">
+              From packaging and regulated healthcare collaterals at Venus Remedies and Ultra Healthcare to global SaaS campaigns at ProofHub, I translate business goals into <strong class="bio-highlight">consistent, user-focused visuals</strong> — landing pages, emails, social content, and documented brand guidelines.
+            </p>
+          </div>
+
+          <div class="about-stats" data-about-stats>
+            <article class="stat-box" style="--stat-delay: 0ms">
+              <span class="stat-box-num" data-stat-count="5" data-suffix="+">0</span>
+              <span class="stat-box-label">Years Experience</span>
+            </article>
+            <article class="stat-box" style="--stat-delay: 100ms">
+              <span class="stat-box-num" data-stat-count="3">0</span>
+              <span class="stat-box-label">Companies</span>
+            </article>
+            <article class="stat-box" style="--stat-delay: 200ms">
+              <span class="stat-box-num">ProofHub</span>
+              <span class="stat-box-label">Current Role</span>
+            </article>
+            <article class="stat-box" style="--stat-delay: 300ms">
+              <span class="stat-box-num">Chandigarh</span>
+              <span class="stat-box-label">Based In</span>
+            </article>
+          </div>
+
+          <ul class="about-skills reveal" data-reveal aria-label="Skills">
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe InDesign</li>
+            <li>Figma</li>
+            <li>Design Thinking</li>
+            <li>Brand Guidelines</li>
+            <li>Typography &amp; Layout</li>
+            <li>UI/UX Design</li>
+            <li>Illustration</li>
+            <li>Print &amp; Packaging</li>
+            <li>Social Media Design</li>
+            <li>Email &amp; Web Banners</li>
+            <li>Infographics</li>
+            <li>Visual Storytelling</li>
+            <li>Requirements Gathering</li>
+            <li>Editorial Design</li>
+          </ul>
+          <a href="https://www.linkedin.com/in/dagarneha5/" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic reveal" data-reveal data-cursor="hover">
+            <span class="btn-label">View LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section signature-direction" id="signature">
+      <div class="container">
+        <div class="signature-header" data-section-header>
+          <span class="section-tag section-heading-sub">Art Direction</span>
+          <h2 class="section-title section-heading-main">
+            <span class="section-title-wrap">
+              <span class="section-title-inner">A portfolio with <em>presence</em></span>
+              <span class="section-title-underline" aria-hidden="true"></span>
+            </span>
+          </h2>
+        </div>
+
+        <div class="signature-grid">
+          <article class="signature-card signature-card--large reveal" data-reveal>
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80" alt="Creative direction moodboard with typography" loading="lazy" />
+            <div class="signature-card-meta">
+              <span class="signature-kicker">01</span>
+              <h3>Editorial-first visual language</h3>
+              <p>Bold headlines, clean spacing, and image-led storytelling inspired by premium Behance portfolio presentations.</p>
+            </div>
+          </article>
+
+          <article class="signature-card reveal" data-reveal>
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900&q=80" alt="Brand identity composition and color studies" loading="lazy" />
+            <div class="signature-card-meta">
+              <span class="signature-kicker">02</span>
+              <h3>Brand system thinking</h3>
+              <p>Each case study balances visual impact with strategic context so clients can see both craft and business intent.</p>
+            </div>
+          </article>
+
+          <article class="signature-card reveal" data-reveal>
+            <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=900&q=80" alt="Campaign design board and layout sheets" loading="lazy" />
+            <div class="signature-card-meta">
+              <span class="signature-kicker">03</span>
+              <h3>Campaign-ready execution</h3>
+              <p>From concept frames to rollout assets, the output is built to perform across social, web, and product surfaces.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-header section-header--center" data-section-header>
+          <span class="section-tag section-heading-sub">Services</span>
+          <h2 class="section-title section-heading-main">
+            <span class="section-title-wrap">
+              <span class="section-title-inner">How I can <em>help</em> you</span>
+              <span class="section-title-underline" aria-hidden="true"></span>
+            </span>
+          </h2>
+        </div>
+
+        <div class="services-grid" id="services-grid">
+          <article class="service-card" data-service-card style="--card-delay: 0ms">
+            <div class="service-icon-wrap">
+              <span class="service-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <path d="M14 4L22 10V18L14 24L6 18V10L14 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <circle cx="14" cy="14" r="3" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </span>
+              <span class="service-num" data-service-count="1" data-pad="2">00</span>
+            </div>
+            <h3 class="service-title">Marketing Design</h3>
+            <p class="service-desc">Campaign visuals, social graphics, and promotional assets that communicate ProofHub’s value clearly.</p>
+            <ul class="service-list service-tools">
+              <li>Social Media Creatives</li>
+              <li>Campaign Graphics</li>
+              <li>Email & Web Banners</li>
+            </ul>
+          </article>
+          <article class="service-card" data-service-card style="--card-delay: 100ms">
+            <div class="service-icon-wrap">
+              <span class="service-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <rect x="5" y="6" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M9 11h10M9 15h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="service-num" data-service-count="2" data-pad="2">00</span>
+            </div>
+            <h3 class="service-title">Product Graphics</h3>
+            <p class="service-desc">In-app illustrations, feature graphics, and UI assets that support product marketing and onboarding.</p>
+            <ul class="service-list service-tools">
+              <li>Feature Illustrations</li>
+              <li>Product Screenshots</li>
+              <li>Icon & Asset Design</li>
+            </ul>
+          </article>
+          <article class="service-card" data-service-card style="--card-delay: 200ms">
+            <div class="service-icon-wrap">
+              <span class="service-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <path d="M6 20L14 6L22 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 16h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="service-num" data-service-count="3" data-pad="2">00</span>
+            </div>
+            <h3 class="service-title">Brand Visuals</h3>
+            <p class="service-desc">Consistent brand expression across ProofHub touchpoints — from blog headers to presentation decks.</p>
+            <ul class="service-list service-tools">
+              <li>Brand Consistency</li>
+              <li>Layout & Typography</li>
+              <li>Presentation Design</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-header section-header--center" data-section-header>
+          <span class="section-tag section-heading-sub">Career</span>
+          <h2 class="section-title section-heading-main">
+            <span class="section-title-wrap">
+              <span class="section-title-inner">Work <em>experience</em></span>
+              <span class="section-title-underline" aria-hidden="true"></span>
+            </span>
+          </h2>
+        </div>
+
+        <div class="timeline" id="timeline" data-timeline>
+          <div class="timeline-line" aria-hidden="true"><span class="timeline-line-fill"></span></div>
+
+          <article class="timeline-item timeline-item--left" data-timeline-item style="--tl-index: 0">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-duration">Mar 2023 — Present · 3 yrs 3 mos</span>
+              <h3 class="timeline-role">Graphic Designer</h3>
+              <div class="timeline-company-wrap">
+                <img src="https://www.proofhub.com/wp-content/uploads/2026/04/Frame-3948.png" alt="" class="timeline-company-logo" width="28" height="28" loading="lazy" />
+                <p class="timeline-company">ProofHub · Full-time · On-site</p>
+              </div>
+              <p class="timeline-location">Chandigarh, India</p>
+              <ul class="timeline-list">
+                <li>Designed and delivered marketing assets — landing pages, web banners, emails, and promotional content for global campaigns.</li>
+                <li>Collaborated with product and content teams for consistent branding across digital touchpoints.</li>
+                <li>Developed UI elements and illustrations to enhance platform usability.</li>
+                <li>Established and documented brand guidelines for cross-department visual consistency.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item timeline-item--right" data-timeline-item style="--tl-index: 1">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-duration">Jun 2022 — Mar 2023 · 10 mos</span>
+              <h3 class="timeline-role">Graphic Designer</h3>
+              <p class="timeline-company">Venus Remedies Limited · Full-time · On-site</p>
+              <p class="timeline-location">Panchkula, Haryana, India</p>
+              <ul class="timeline-list">
+                <li>Created product packaging, marketing brochures, internal communications, and social media graphics.</li>
+                <li>Partnered with marketing and product teams to translate complex pharmaceutical information into clear design.</li>
+                <li>Maintained brand messaging and compliance with industry visual standards.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item timeline-item--left" data-timeline-item style="--tl-index: 2">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-duration">Feb 2021 — Jun 2022 · 1 yr 5 mos</span>
+              <h3 class="timeline-role">Graphic Designer</h3>
+              <p class="timeline-company">Ultra Healthcare Official · Full-time · On-site</p>
+              <p class="timeline-location">Panchkula, Haryana, India</p>
+              <ul class="timeline-list">
+                <li>Designed branding materials, print-ready marketing collaterals, and product illustrations.</li>
+                <li>Built social media content and infographics for customer education and brand awareness.</li>
+                <li>Ensured accurate design production aligned with healthcare regulations and visual guidelines.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="testimonials-bg" aria-hidden="true">
+        <span class="testimonials-quote testimonials-quote--1">"</span>
+        <span class="testimonials-quote testimonials-quote--2">"</span>
+        <span class="testimonials-quote testimonials-quote--3">"</span>
+        <span class="testimonials-quote testimonials-quote--4">"</span>
+        <span class="testimonials-quote testimonials-quote--5">"</span>
+        <span class="testimonials-quote testimonials-quote--6">"</span>
+      </div>
+
+      <div class="container">
+        <div class="section-header" data-section-header>
+          <span class="section-tag section-heading-sub">Philosophy</span>
+          <h2 class="section-title section-heading-main">
+            <span class="section-title-wrap">
+              <span class="section-title-inner">What drives my <em>design</em></span>
+              <span class="section-title-underline" aria-hidden="true"></span>
+            </span>
+          </h2>
+        </div>
+
+        <div class="testimonial-carousel reveal" id="testimonial-carousel" data-testimonial-carousel data-reveal>
+          <button type="button" class="testimonial-arrow testimonial-prev" id="testimonial-prev" aria-label="Previous testimonial" disabled>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <div class="testimonial-viewport">
+            <div class="testimonial-track" id="testimonial-track">
+              <article class="testimonial-card glass-card active" data-slide="0">
+                <span class="testimonial-mark" aria-hidden="true">"</span>
+                <blockquote class="testimonial-text">At ProofHub, design is more than a job. It's a journey of growth. Surrounded by a supportive team and faced with stimulating challenges, we thrive in an environment built for creativity.</blockquote>
+                <footer class="testimonial-meta">
+                  <div class="testimonial-client">
+                    <cite class="testimonial-name">Neha Dagar</cite>
+                    <span class="testimonial-role">Graphic Designer, ProofHub</span>
+                    <time class="testimonial-date"><a href="https://www.proofhub.com/about/careers" target="_blank" rel="noopener noreferrer">proofhub.com/about/careers</a></time>
+                  </div>
+                </footer>
+              </article>
+
+              <article class="testimonial-card glass-card" data-slide="1">
+                <span class="testimonial-mark" aria-hidden="true">"</span>
+                <blockquote class="testimonial-text">The best part? Every pixel and prototype has a purpose: to bring clarity, guide decisions, and ultimately, help people do their best work.</blockquote>
+                <footer class="testimonial-meta">
+                  <div class="testimonial-client">
+                    <cite class="testimonial-name">Design approach</cite>
+                    <span class="testimonial-role">ProofHub Team Spotlight</span>
+                    <time class="testimonial-date">Featured on careers page</time>
+                  </div>
+                </footer>
+              </article>
+
+              <article class="testimonial-card glass-card" data-slide="2">
+                <span class="testimonial-mark" aria-hidden="true">"</span>
+                <blockquote class="testimonial-text">ProofHub is built by people who use it every day — designers, developers, marketers, and support specialists who won't tolerate "good enough" when it could be great.</blockquote>
+                <footer class="testimonial-meta">
+                  <div class="testimonial-client">
+                    <cite class="testimonial-name">ProofHub Culture</cite>
+                    <span class="testimonial-role">About ProofHub</span>
+                    <time class="testimonial-date"><a href="https://www.proofhub.com/about" target="_blank" rel="noopener noreferrer">proofhub.com/about</a></time>
+                  </div>
+                </footer>
+              </article>
+            </div>
+          </div>
+
+          <button type="button" class="testimonial-arrow testimonial-next" id="testimonial-next" aria-label="Next testimonial">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <div class="testimonial-dots" role="tablist" aria-label="Testimonial slides">
+            <button type="button" class="testimonial-dot active" data-go="0" aria-label="Testimonial 1" aria-selected="true"></button>
+            <button type="button" class="testimonial-dot" data-go="1" aria-label="Testimonial 2" aria-selected="false"></button>
+            <button type="button" class="testimonial-dot" data-go="2" aria-label="Testimonial 3" aria-selected="false"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-header section-header--center faq-header" data-section-header data-faq-header>
+          <span class="section-tag section-heading-sub">FAQ</span>
+          <h2 class="section-title section-heading-main">
+            <span class="section-title-wrap">
+              <span class="section-title-inner">Common <em>questions</em></span>
+              <span class="section-title-underline section-title-underline--left" aria-hidden="true"></span>
+            </span>
+          </h2>
+        </div>
+
+        <div class="faq-list" id="faq-list" data-faq-list>
+          <div class="faq-item" data-faq-item>
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-num">01</span>
+              <span class="faq-q-text">What types of projects do you take on?</span>
+              <span class="faq-arrow" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" hidden>
+              <div class="faq-answer-inner">
+                <p>I specialize in marketing graphics, product visuals, and brand design for SaaS — currently as Graphic Designer at ProofHub. <a href="#contact">Connect on LinkedIn</a> to discuss your scope.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" data-faq-item>
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-num">02</span>
+              <span class="faq-q-text">What is your typical project timeline?</span>
+              <span class="faq-arrow" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" hidden>
+              <div class="faq-answer-inner">
+                <p>Brand projects run 4–8 weeks; product design engagements 8–16 weeks depending on complexity. I provide a detailed timeline after our discovery call.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" data-faq-item>
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-num">03</span>
+              <span class="faq-q-text">Do you work with remote clients?</span>
+              <span class="faq-arrow" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" hidden>
+              <div class="faq-answer-inner">
+                <p>Yes — most of my clients are remote. I collaborate via Figma, Slack, and video calls across time zones.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" data-faq-item>
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-num">04</span>
+              <span class="faq-q-text">What are your rates?</span>
+              <span class="faq-arrow" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" hidden>
+              <div class="faq-answer-inner">
+                <p>Projects start at $5k for focused engagements. Share your budget range in the <a href="#contact">contact form</a> and I'll recommend the best approach.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-bg" aria-hidden="true">
+        <div class="contact-bg-gradient"></div>
+        <div class="contact-bg-shapes">
+          <svg class="contact-shape contact-shape--1" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+          <svg class="contact-shape contact-shape--2" viewBox="0 0 200 80" aria-hidden="true"><path d="M0,40 Q50,0 100,40 T200,40" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+          <svg class="contact-shape contact-shape--3" viewBox="0 0 80 80" aria-hidden="true"><rect x="10" y="10" width="60" height="60" rx="8" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+        </div>
+      </div>
+
+      <div class="container contact-grid">
+        <div class="contact-info" data-contact-info>
+          <div class="section-heading-block" data-section-header>
+            <span class="section-tag section-heading-sub">Get in Touch</span>
+            <h2 class="section-title section-heading-main contact-heading">
+              <span class="section-title-wrap">
+                <span class="section-title-inner" data-split-heading>Let's create something <em>remarkable</em></span>
+                <span class="section-title-underline" aria-hidden="true"></span>
+              </span>
+            </h2>
+          </div>
+          <p class="contact-desc contact-subtext">Have a project in mind? Email me or connect on LinkedIn — I typically respond within 48 hours.</p>
+          <div class="contact-methods">
+            <a href="mailto:dagarneha5@gmail.com" class="contact-method magnetic" data-cursor="hover" data-copy="dagarneha5@gmail.com">
+              <span class="contact-method-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.2"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+              <span class="contact-method-text">dagarneha5@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/dagarneha5/" target="_blank" rel="noopener noreferrer" class="contact-method magnetic" data-cursor="hover">
+              <span class="contact-method-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+              <span class="contact-method-text">linkedin.com/in/dagarneha5</span>
+            </a>
+            <a href="https://www.proofhub.com/" target="_blank" rel="noopener noreferrer" class="contact-method magnetic" data-cursor="hover">
+              <span class="contact-method-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              </span>
+              <span class="contact-method-text">proofhub.com</span>
+            </a>
+          </div>
+          <div class="contact-social">
+            <a href="https://www.linkedin.com/in/dagarneha5/" target="_blank" rel="noopener noreferrer" class="contact-social-link magnetic" data-cursor="hover" aria-label="LinkedIn">in</a>
+            <a href="https://www.proofhub.com/about/careers" target="_blank" rel="noopener noreferrer" class="contact-social-link magnetic" data-cursor="hover" aria-label="ProofHub Careers">PH</a>
+            <a href="https://www.proofhub.com/about" target="_blank" rel="noopener noreferrer" class="contact-social-link magnetic" data-cursor="hover" aria-label="ProofHub About">Ab</a>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card" id="contact-form" data-contact-form action="#" method="post" novalidate>
+          <div class="form-group" data-form-field style="--field-index: 0">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name" />
+            <span class="form-error" role="alert"></span>
+          </div>
+          <div class="form-group" data-form-field style="--field-index: 1">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@company.com" autocomplete="email" />
+            <span class="form-error" role="alert"></span>
+          </div>
+          <div class="form-group" data-form-field style="--field-index: 2">
+            <label for="budget">Budget Range</label>
+            <select id="budget" name="budget">
+              <option value="">Select range</option>
+              <option value="5-10k">$5k – $10k</option>
+              <option value="10-25k">$10k – $25k</option>
+              <option value="25k+">$25k+</option>
+            </select>
+          </div>
+          <div class="form-group" data-form-field style="--field-index: 3">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project..."></textarea>
+            <span class="form-error" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-submit btn-ripple" data-cursor="hover">
+            <span class="btn-label">Send Message</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+          <p class="form-success" id="form-success" role="status" hidden>Your email app should open with your message pre-filled.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer" data-footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo magnetic" data-cursor="hover">Neha Dagar</a>
+        <p class="footer-copy">© 2026 Neha Dagar · Graphic Designer at ProofHub</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#work" class="footer-link magnetic" data-cursor="hover">Work</a>
+        <a href="#about" class="footer-link magnetic" data-cursor="hover">About</a>
+        <a href="#services" class="footer-link magnetic" data-cursor="hover">Services</a>
+        <a href="#certifications" class="footer-link magnetic" data-cursor="hover">Certifications</a>
+        <a href="#faq" class="footer-link magnetic" data-cursor="hover">FAQ</a>
+        <a href="#contact" class="footer-link magnetic" data-cursor="hover">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.proofhub.com/" target="_blank" rel="noopener noreferrer" class="footer-social-btn magnetic" data-cursor="hover" aria-label="ProofHub">PH</a>
+        <a href="https://www.linkedin.com/in/dagarneha5/" target="_blank" rel="noopener noreferrer" class="footer-social-btn magnetic" data-cursor="hover" aria-label="LinkedIn">in</a>
+        <a href="https://www.proofhub.com/about/careers" target="_blank" rel="noopener noreferrer" class="footer-social-btn magnetic" data-cursor="hover" aria-label="ProofHub Careers">Cr</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="index.html" class="pastel-switch" aria-label="Switch to classic coral theme">
+    <span class="pastel-switch-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+    Classic
+  </a>
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" hidden>
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 15V5M5 10l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+
+  <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="project-modal-overlay" id="modal-overlay" tabindex="-1"></div>
+    <div class="project-modal-card" role="document">
+      <button type="button" class="project-modal-close" id="modal-close" aria-label="Close project">×</button>
+      <button type="button" class="project-modal-nav project-modal-prev" id="modal-prev" aria-label="Previous project">‹</button>
+      <button type="button" class="project-modal-nav project-modal-next" id="modal-next" aria-label="Next project">›</button>
+      <div class="project-modal-scroll" id="modal-content"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="script.js"></script>
+</body>
+</html>
