@@ -64,4 +64,33 @@
 
   window.addEventListener("scroll", updateBar, { passive: true });
   updateBar();
+
+  /* Manifesto: word-by-word reveal while scrolling (zarcerog-style) */
+  const manifestoSection = document.getElementById("manifesto");
+  const manifestoWords = document.querySelectorAll("[data-manifesto-scroll] .m-word");
+
+  function updateManifestoScroll() {
+    if (!manifestoSection || !manifestoWords.length) return;
+
+    if (prefersReducedMotion) {
+      manifestoWords.forEach((word) => word.classList.add("is-lit"));
+      return;
+    }
+
+    const rect = manifestoSection.getBoundingClientRect();
+    const sectionHeight = manifestoSection.offsetHeight;
+    const viewport = window.innerHeight;
+    const scrollable = Math.max(sectionHeight - viewport, 1);
+    // 0 when sticky starts pinning, 1 near end of section
+    const progress = Math.min(Math.max(-rect.top / scrollable, 0), 1);
+    const litCount = Math.round(progress * manifestoWords.length);
+
+    manifestoWords.forEach((word, index) => {
+      word.classList.toggle("is-lit", index < litCount);
+    });
+  }
+
+  window.addEventListener("scroll", updateManifestoScroll, { passive: true });
+  window.addEventListener("resize", updateManifestoScroll, { passive: true });
+  updateManifestoScroll();
 })();
